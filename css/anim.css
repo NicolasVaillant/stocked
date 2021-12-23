@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.selected{
+    background: var(--selected);
+    transition: var(--transition3);
+}
+.showCreateTask{
+    display: block;
+}
+.showCreateTask_blur{
+    filter: blur(.4em);
+}
+.card_add_plus_tooltip_show{
+    opacity: 1!important;
+    transform: translate(-50%, -50%) !important;
+    transition: var(--transition3);
+}

@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+.card{
+    height: auto;
+    width: auto;
+    background: var(--main_w);
+    border-radius: var(--border1);
+    padding: var(--paddButton);
+    display: flex;
+    flex-direction: column;
+    transform: scale(1);
+    transition: var(--transition3);
+}
+.clickOnCard{
+    transform: scale(.95);
+    transition: var(--transition3);
+}
+.card_add{
+    height: 100%;
+    width: 40%;
+    position: relative;
+    background: var(--w);
+    border-radius: 100vh;
+    gap: 0!important;
+}
+.card_amount{
+    margin: auto 0 auto auto;
+    color: var(--w);
+}
+.card_textarea{
+    height: 100%;
+    margin: 1em 0;
+    border-radius: var(--border1);
+    border: 0;
+    resize: none;
+    background: var(--w_op);
+    outline: none;
+    color: var(--w);
+    padding: var(--padd2);
+}
+.card_header{
+    background: var(--w_op);
+    border-radius: var(--border1);
+    padding: var(--paddButton);
+}
+.card_emoji{
+    width: 3vh;
+    height: auto;
+}
+
+.card_add_change{
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    border-radius: var(--border2);
+}
+.card_add_plus_tooltip{
+    position: absolute;
+    z-index: 1;
+    width: 15vw;
+    opacity: 0;
+    background: var(--w);
+    box-shadow: 0 0 10px 0 var(--grey1);
+    border-radius: var(--border1);
+    top: -4vh;
+    left: 50%;
+    transition: var(--transition3);
+    transform: translate(-50%, 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card_add_plus_tooltip_input{
+    width: 100%;
+    border: 1px solid var(--grey3);
+    border-radius: var(--border1);
+    padding: var(--padd2);
+    outline: none;
+    color: var(--grey2);
+}
+.card_modif{
+    margin: auto 0 0 0;
+}
+.card_add_change:hover{
+    background:var(--grey3);
+}
+.card_progress{
+    width: 100%;
+    background-color: var(--w_op);
+    border-radius: var(--border1);
+    position: relative;
+}
+.card_progress_bar_txt{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    padding: 0 var(--paddButton);
+    color: var(--grey1);
+    font-family: Raleway, serif;
+}
+.card_progress_bar{
+    width: 0;
+    height: 30px;
+    background: linear-gradient(90deg, var(--w_op), var(--w));
+    text-align: center;
+    line-height: 30px;
+    border-radius: var(--border1);
+    color: white;
+}
+.errorInput{
+    border: 2px solid red!important;
+}

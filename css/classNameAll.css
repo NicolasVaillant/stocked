@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.wi20{
+    width: auto;
+    margin: auto 0;
+}
+.fontMin{
+    font-size: inherit;
+}
+.fontFamily{
+    font-family: Raleway, serif!important;
+}
+.abs50{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.flexAlign{
+    align-items: center;
+    justify-content: center;
+}
+.flexAlignL{
+    align-items: center;
+}
+.gridAuto{
+    grid-template-columns: 1fr auto!important;
+}
+.showElem{
+    visibility: visible!important;
+    opacity: 1!important;
+}

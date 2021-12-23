@@ -1,0 +1,183 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/anim.css">
+    <link rel="stylesheet" href="css/root.css">
+    
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/classNameAll.css">
+    
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    
+    <link rel="stylesheet" href="css/mediaqueries/style_media_web.css">
+    <link rel="stylesheet" href="css/mediaqueries/style_media_alt.css">
+    <link rel="stylesheet" href="css/mediaqueries/style_media_mob.css">
+
+    <script src="js/script.js" defer></script>
+
+    <title>stocked</title>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+            <div class="headerContent">
+                <input class="searchContent" type="text" placeholder="Rechercher">
+                <div class="col-right flexRow flexAlign">
+                    <div class="amountAll">
+                        <label>
+                            <input type="text" value="" id="allMoney" class="amountAllInput searchContent">
+                        </label>
+                    </div>
+                    <button class="addStock">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                </div>
+                
+            </div>
+            <div class="scrollableContent"></div>
+        </div>
+    </main>
+    <aside>
+        <div class="createStock">
+            <div class="closeAside flexRow fontFamily">
+                <h1>Créer cagnotte</h1>
+                <i class="fas fa-times closeAsideButton"></i>
+            </div>
+            <div class="contentAside">
+                <div class="sel-title-content">
+                    <p class="sel-title wi20">Titre</p>
+                    <input type="text" class="inputStock contentAsideTitle">
+                </div>
+                <hr>
+                <div class="sel-color-content">
+                    <p class="sel-title wi20">Couleur</p>
+                    <div class="flexRow colorPickerAll">
+                        <label for="color-1" class="colorPicker">
+                            <input type="radio" id="color-1" name="color" class="radio" checked>
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-1)"></span>
+                            </span>
+                        </label>
+            
+                        <label for="color-2" class="colorPicker">
+                            <input type="radio" id="color-2" name="color" class="radio">
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-2)"></span>
+                            </span>
+                        </label>
+            
+                        <label for="color-3" class="colorPicker">
+                            <input type="radio" id="color-3" name="color" class="radio">
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-3)"></span>
+                            </span>
+                        </label>
+            
+                        <label for="color-4" class="colorPicker">
+                            <input type="radio" id="color-4" name="color" class="radio">
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-4)"></span>
+                            </span>
+                        </label>
+            
+                        <label for="color-5" class="colorPicker">
+                            <input type="radio" id="color-5" name="color" class="radio">
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-5)"></span>
+                            </span>
+                        </label>
+                    </div>
+    
+                </div>
+                <hr>
+                <div class="sel-emoji-content">
+                    <p class="sel-title wi20">Emoji</p>
+                    <div class="flexRow emojiPickerAll">
+                        <label for="emoji_1" class="colorPicker">
+                            <input type="radio" id="emoji_1" name="emoji" class="radio" checked>
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-emoji)">
+                                    <img src="ressources/emoji/emoji_1.png" alt="emoji-1">
+                                </span>
+                            </span>
+                        </label>
+            
+                        <label for="emoji_2" class="colorPicker">
+                            <input type="radio" id="emoji_2" name="emoji" class="radio">
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-emoji)">
+                                    <img src="ressources/emoji/emoji_2.png" alt="emoji_2">
+                                </span>
+                            </span>
+                        </label>
+            
+                        <label for="emoji_3" class="colorPicker">
+                            <input type="radio" id="emoji_3" name="emoji" class="radio">
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-emoji)">
+                                    <img src="ressources/emoji/emoji_3.png" alt="emoji_3">
+                                </span>
+                            </span>
+                        </label>
+            
+                        <label for="emoji_4" class="colorPicker">
+                            <input type="radio" id="emoji_4" name="emoji" class="radio">
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-emoji)">
+                                    <img src="ressources/emoji/emoji_4.png" alt="emoji_4">
+                                </span>
+                            </span>
+                        </label>
+            
+                        <label for="emoji_5" class="colorPicker">
+                            <input type="radio" id="emoji_5" name="emoji" class="radio">
+                            <span class="color-span">
+                                <span class="color-center" style="--gradient:var(--gradient-emoji)">
+                                    <img src="ressources/emoji/emoji_5.png" alt="emoji_5">
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+    
+                </div>
+                <hr>
+                <div class="sel-amount-content">
+                    <p class="sel-title wi20">Montant</p>
+                    <div class="containerInput">
+                        <input type="text" class="inputStock contentAsideAmount">
+                        <p class="sel-title w abs50">€</p>
+                    </div>
+                </div>
+                <div class="calcFromALlMoney fontFamily">
+                    <p>Total : <span class="allMoney fontFamily"></span> € • </p>
+                    <p>Restant : <span class="calc fontFamily"></span> €</p>
+                </div>
+                <hr>
+                <div class="sel-deadLine-content">
+                    <p class="sel-title wi20">Limite</p>
+                    <div class="containerInput">
+                        <input type="datetime-local" class="inputStock fontMin contentAsideDeadLine">
+                    </div>
+                </div>
+                <hr>
+                <div class="sel-title-content">
+                    <div></div>
+                    <button class="createStockButton" onclick="createStockButton()">Créer</button>
+                </div>
+                <p class="errorInput_txt fontFamily flexRow flexAlign">Remplissez les champs manquants</p>
+            </div>
+        </div>
+    </aside>
+</body>
+
+</html>
