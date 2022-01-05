@@ -1,4 +1,4 @@
-<html>
+<html lang="FR">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/classNameAll.css">
+    <link rel="stylesheet" href="css/contextMenu.css">
     
     <link rel="stylesheet" href="fontawesome/css/all.css">
     
@@ -23,6 +24,10 @@
     <link rel="stylesheet" href="css/mediaqueries/style_media_mob.css">
 
     <script src="js/script.js" defer></script>
+    <script src="js/backup.js" defer></script>
+    <script src="js/window.js" defer></script>
+    <script src="js/AR_card.js" defer></script>
+    <script src="js/rc.js" defer></script>
 
     <title>stocked</title>
 </head>
@@ -30,14 +35,14 @@
 <body>
     <main>
         <div class="content">
-            <div class="headerContent">
-                <input class="searchContent" type="text" placeholder="Rechercher">
+            <div class="headerContent fontFamily">
+                <div class="flexRow flexAlign">
+                    <p class="fontMoy">Stocked</p>
+                    <label>
+                        <input class="searchContent" type="text" placeholder="Rechercher">
+                    </label>
+                </div>
                 <div class="col-right flexRow flexAlign">
-                    <div class="amountAll">
-                        <label>
-                            <input type="text" value="" id="allMoney" class="amountAllInput searchContent">
-                        </label>
-                    </div>
                     <button class="addStock">
                         <i class="fas fa-plus-circle"></i>
                     </button>
@@ -45,12 +50,24 @@
                 
             </div>
             <div class="scrollableContent"></div>
+            <div class="footerContent fontFamily">
+                <div class="amountAll">
+                    <label>
+                        <input type="text" value="" id="allMoney" class="amountAllInput searchContent">
+                    </label>
+                    <p class="sel-title fontMoy abs50">€</p>
+                </div>
+                <p class="calc">
+                    <i class="infoCalc fas fa-info-circle"></i> Restant :
+                    <span class="resultAll"></span>
+                </p>
+            </div>
         </div>
     </main>
     <aside>
         <div class="createStock">
             <div class="closeAside flexRow fontFamily">
-                <h1>Créer cagnotte</h1>
+                <h1>Créer un budget</h1>
                 <i class="fas fa-times closeAsideButton"></i>
             </div>
             <div class="contentAside">
@@ -154,7 +171,9 @@
                 <div class="sel-amount-content">
                     <p class="sel-title wi20">Montant</p>
                     <div class="containerInput">
-                        <input type="text" class="inputStock contentAsideAmount">
+                        <label>
+                            <input type="text" class="inputStock contentAsideAmount">
+                        </label>
                         <p class="sel-title w abs50">€</p>
                     </div>
                 </div>
@@ -166,18 +185,57 @@
                 <div class="sel-deadLine-content">
                     <p class="sel-title wi20">Limite</p>
                     <div class="containerInput">
-                        <input type="datetime-local" class="inputStock fontMin contentAsideDeadLine">
+                        <label>
+                            <input type="datetime-local" class="inputStock fontMin contentAsideDeadLine">
+                        </label>
                     </div>
                 </div>
                 <hr>
                 <div class="sel-title-content">
                     <div></div>
-                    <button class="createStockButton" onclick="createStockButton()">Créer</button>
+                    <button class="createStockButton" onclick="AR_card(); backup(getDate())">Créer</button>
                 </div>
                 <p class="errorInput_txt fontFamily flexRow flexAlign">Remplissez les champs manquants</p>
             </div>
         </div>
     </aside>
+    <div id="contextMenu" class="context-menu"
+         style="display: none">
+        <ul>
+            <li id="end">
+                <div class="i_div"><i id="i_zone_1"></i></div>
+                <div><p class="txt_zone_1"></p></div>
+            </li>
+            <li id="back">
+                <div class="i_div"><i id="i_zone_2"></i></div>
+                <div><p class="txt_zone_2"></p></div>
+            </li>
+            <li id="delete">
+                <div class="i_div"><i id="i_zone_3"></i></div>
+                <div><p class="txt_zone_3"></p></div>
+            </li>
+            <li id="shareTask">
+                <div class="i_div"><i class="fas fa-share-square"></i></div>
+                <div id="shareTaskContainer">
+                    <p class="txt_zone_5">Partager</p>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="extend_share">
+                    <ul>
+                        <li><i class="fas fa-quote-right"></i>
+                            Le contenu du todo</li>
+                        <li><i class="fas fa-sticky-note"></i>
+                            Le todo</li>
+                    </ul>
+                </div>
+            </li>
+            <hr>
+            <li id="infoTask">
+                <div class="i_div"><i class="fas fa-info-circle"></i></div>
+                <div><p class="txt_zone_6"></p></div>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>

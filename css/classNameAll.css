@@ -7,6 +7,9 @@
 .fontMin{
     font-size: inherit;
 }
+.fontMoy{
+    font-size: 1.2em;
+}
 .fontFamily{
     font-family: Raleway, serif!important;
 }

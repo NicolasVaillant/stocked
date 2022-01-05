@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+.context-menu hr {
+    /*background: var(--b_sec);*/
+    margin: 0 0.5em;
+    border: 1px solid  var(--b_sec);
+    border-radius: var(--border1);
+}
+.context-menu {
+    font-family: 'Open Sans', sans-serif, Bahnschrift;
+    position: absolute;
+    background: var(--w);
+    border-radius: var(--border1);
+    z-index: 1000;
+}
+
+.context-menu ul {
+    padding: 0.5em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    min-width: 150px;
+    list-style: none;
+    box-shadow: 0 0 3px 0 var(--b_sec_o);
+    border-radius: var(--border1);
+}
+
+.context-menu ul li {
+    border-radius: var(--border1);
+    background: var(--w);
+    padding: 1em;
+    gap: 1em;
+    word-break: break-word;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: flex-start;
+}
+.context-menu ul li:last-child:hover {
+    background: var(--w);
+    cursor: initial
+}
+.i_div{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.context-menu ul li div p{
+    margin: auto auto 0 0;
+}
+#deleteTask:hover{color: #ed143d}
+#shareTask:hover{color: #3d3dcf}
+#enTask:hover{color: #0c660c}
+/*#speTask:hover{color: #c3c112}*/
+/*#impTask:hover{color: var(--red)}*/
+
+.context-menu ul li:hover {
+    background: var(--selected);
+}
+
+#shareTask{
+    position: relative;
+}
+.context-menu ul{
+    overflow: visible!important;
+    border-radius: var(--border1);
+}
+.extend_share{
+    position: absolute;
+    right: -150px;
+    width: 150px;
+    top: 0;
+    opacity: 0;
+    /*transition: var(--transition1);*/
+}
+.extend_share ul{padding: 0;margin-left: 1em;background: var(--w)}
+.extend_share ul li{background: var(--w)}
+.extend_share ul li:hover,.extend_share ul li:last-child:hover{background: var(--td_bg_body);cursor: pointer}
+.extend_share ul li:last-child:hover{
+    border-radius: 0 0 var(--border1) var(--border1);
+}
+.extend_share ul li:first-child:hover{
+    border-radius: var(--border1) var(--border1) 0 0;
+}
+
+#shareTaskContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+#shareTask:hover .extend_share{
+    opacity: 1;
+    /*transition: var(--transition1);*/
+}

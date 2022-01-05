@@ -131,26 +131,6 @@ hr{
     border: 2px solid var(--w);
 }
 
-.switch_span{
-    background: var(--gradient-emoji);
-    opacity: 1;
-    height: 5vh;
-    width: 5vh;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 2px solid var(--w);
-}
-.switch_input{
-    display: none;
-}
-
-.switch_input:checked + .switch_span {
-    opacity: .5;
-    border: 2px solid var(--grey1);
-}
 .errorInput_txt{
     margin: 2em 0 0 0;
     color: red;

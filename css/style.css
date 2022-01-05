@@ -2,6 +2,7 @@
 
 body{
     background: var(--main_w);
+    overflow: hidden;
 }
 main{
     height: 100vh;
@@ -16,13 +17,21 @@ main{
     background: var(--w);
     border-radius: var(--border2);
 }
-.headerContent{
+.headerContent,
+.footerContent{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: var(--padd2);
     border-bottom: 1px solid var(--grey1);
-    margin: 1em;
+    margin: 1em 1em 0 1em;
+}
+.footerContent{
+    border-bottom: 0;
+    border-top: 1px solid var(--grey1);;
+}
+.infoCalc{
+    cursor: pointer;
 }
 .searchContent{
     border: 1px solid var(--grey1);
@@ -45,11 +54,12 @@ main{
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100%;
-    padding: var(--padd1);
+    padding: 0 var(--padd2);
     margin: 1em 0;
     display: grid;
     gap: 1em;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-auto-flow: row;
 }
+.amountAll{position: relative}
